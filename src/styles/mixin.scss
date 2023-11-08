@@ -1,0 +1,31 @@
+@import './variables.scss';
+
+// FONT GRADIENT
+@mixin gradient($initial-color, $last-color) {
+  background-image: linear-gradient(90deg, $initial-color, $last-color);
+  background-clip: text;
+  color: transparent;
+}
+
+// SCROLL STYLE
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+  ::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+}
+
+// Header Change Site Mixin
+@mixin HeaderChangeSiteIcon {
+  background-repeat: no-repeat;
+  background-size: 1.67rem;
+  width: 1.67rem;
+  height: 1.67rem;
+  align-self: center;
+}

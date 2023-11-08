@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+
+.social-link {
+  $icon-size: 3rem;
+
+  a {
+    margin-right: 1rem;
+    background-size: 0;
+  }
+
+  .social-link-text {
+    font-size: .739rem;
+  }
+
+  .social-link-list {
+    display: flex;
+    .instagram-icon {
+      background-image: url('./icons/icons8-instagram-old.svg');
+      background-repeat: no-repeat;
+      background-size: $icon-size;
+      min-height: $icon-size;
+      width: $icon-size;
+    }
+    .telegram-icon {
+      background-image: url('./icons/icons8-telegram-app.svg');
+      background-repeat: no-repeat;
+      background-size: $icon-size;
+      min-height: $icon-size;
+      width: $icon-size;
+    }
+    .email-icon {
+      background-image: url('./icons/icons8-important-mail.svg');
+      background-repeat: no-repeat;
+      background-size: $icon-size;
+      min-height: $icon-size;
+      width: $icon-size;
+    }
+    .github-icon {
+      background-image: url('./icons/icons8-github.svg');
+      background-repeat: no-repeat;
+      background-size: $icon-size;
+      min-height: $icon-size;
+      width: $icon-size;
+    }
+    .mastodon-icon {
+      background-image: url('./icons/icons8-mastodon.svg');
+      background-repeat: no-repeat;
+      background-size: $icon-size;
+      min-height: $icon-size;
+      width: $icon-size;
+    }
+    .twitter-icon {
+      background-image: url('./icons/icons8-twitter.svg');
+      background-repeat: no-repeat;
+      background-size: $icon-size;
+      min-height: $icon-size;
+      width: $icon-size;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
+.home-showcase-list-header {
+  margin: 0 1rem;
+  padding: 1rem;
+  border-top: 1px solid $line-color;
+  border-bottom: 1px solid $line-color;
+}
+
+.home-showcase-list {
+  display: flex;
+  margin: 1rem;
+  overflow: auto;
+
+  .showcase-card {
+    border: 5px solid whitesmoke;
+    border-radius: 1rem;
+    margin: .5rem;
+    padding: .5rem;
+    width: 13rem;
+    img {
+      height: 12rem;
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    height: 1.5rem;
+  }
+}

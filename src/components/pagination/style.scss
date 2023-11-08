@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+$pagination-button-height: 2rem;
+$pagination-button-width: 2rem;
+.pagination {
+  display: flex;
+  $page-height: 2.4rem;
+  overflow: auto;
+  margin: 1rem 0;
+  height: $page-height;
+  line-height: $page-height;
+  a {
+    background-size: 0;
+    color: #0b346e;
+    background-color: $input-default-color;
+    width: $pagination-button-width;
+    height: $pagination-button-height;
+    line-height: $pagination-button-height;
+    text-align: center;
+    margin-right: 0.3rem;
+    border-radius: .7rem;
+    font-family: monospace;
+    font-weight: bold;
+  }
+  .current {
+    color: white;
+    background-color: $UMEMURASAKI;
+    width: $pagination-button-width;
+  }
+}

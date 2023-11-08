@@ -1,0 +1,30 @@
+@import "../../../styles/variables";
+
+.featured {
+  .featured-inner {
+    p {
+      text-transform: capitalize;
+    }
+    &:first-child {
+      padding-bottom: 1rem;
+    }
+    &:not(:first-child) {
+      padding: 1rem 0;
+      border-top: 2px dashed $line-color;
+    }
+  }
+  .featured-tag {
+    margin: 1rem 0;
+    text-transform: uppercase;
+  }
+}
+
+.view-all-post {
+  a {
+    padding: .2rem 1rem;
+    border: 1px dashed $line-color;
+  }
+  margin: 1rem;
+  text-align: end;
+}
+

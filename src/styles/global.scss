@@ -1,0 +1,57 @@
+@import './variables.scss';
+@import './mixin.scss';
+
+a {
+  text-decoration: none;
+  background-image: linear-gradient($alink-color, $alink-color);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 50% 2px;
+  padding-bottom: 2px;
+  transition: background-size .5s cubic-bezier(1,0,.05,.81);
+  text-transform: uppercase;
+
+  &:link {
+    color: $out-color;
+  }
+  &:hover {
+    background-size: 100% 2px;
+    color: $ahover-color;
+  }
+  &:visited {
+    color: $alink-color;
+  }
+  &:active {
+    color: $SEIHEKI;
+  }
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: .5rem 1rem;
+  border-radius: 0.8rem;
+  background-color: $input-default-color;
+  &:active {
+    box-shadow: 0 0 0 2px $HATOBANEZUMI;
+  }
+}
+
+@include scrollbars(.5rem, $input-default-color);
+// Footer Style
+.footer {
+  margin: 1rem;
+  padding: 1rem 0 0 0;
+  border-top: 1px solid $line-color;
+}
+
+
+* {
+  -webkit-tap-highlight-color:transparent;
+}

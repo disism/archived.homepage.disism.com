@@ -1,0 +1,93 @@
+@import '../../styles/variables';
+@import "../../styles/mixin";
+
+.home_notice {
+  padding: 1rem;
+
+  .domain {
+    color: #f3ecdd;
+    background-color: #24936e;
+    padding: 0 5px 0 5px;
+    border-radius: 5px;
+  }
+  span {
+    color: #31557e;
+  }
+}
+.banner-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  margin: 5rem 6rem 0 6rem;
+  @include gradient($ROKUSYOH, $UMEMURASAKI);
+
+  @media (max-width: $mobile) {
+    font-size: 1.35rem;
+    margin: 2rem 1rem;
+  };
+  @media (min-width: $table-s) and (max-width: $table-b) {
+    font-size: 2rem;
+  }
+}
+.banner-inner {
+  display: flex;
+  flex-direction: row;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+  @media (max-width: $table) {
+    flex-direction: column;
+  }
+  .banner-image {
+    width: 50vw;
+    padding: 1rem;
+    img {
+      margin: 0;
+    }
+    @media (max-width: $mobile) {
+      width: 100vw;
+    }
+    @media (max-width: $table) {
+      width: 100vw;
+    }
+  }
+  .banner-text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    padding: 1rem;
+    h1 {
+      @include gradient($out-color, $grad-left);
+    }
+    h3 {
+      @include gradient($out-color, $grad-left);
+    }
+    a {
+      background-size: 0;
+    }
+    @media (max-width: $mobile) {
+      text-align: center;
+      width: 100vw;
+    }
+    @media (max-width: $table) {
+      text-align: center;
+      width: 100vw;
+    }
+  }
+  .now-start {
+    margin: 1rem 0;
+    width: 12rem;
+    border: 2px dashed $input-default-color;
+    transition: all .2s linear;
+    &:hover {
+      border: 2px dashed $input-default-color;
+      background-color: #fff;
+      box-shadow: 4px 4px 0 0 $input-default-color;
+      color: #000;
+    }
+  }
+}

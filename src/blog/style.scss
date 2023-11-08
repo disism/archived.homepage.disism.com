@@ -1,0 +1,99 @@
+@import "../styles/variables";
+
+.blog-content {
+  margin: 1rem;
+  border-top: 1px solid $line-color;
+  line-height: 1.5rem;
+}
+.blog-header {
+  padding: 1rem 0;
+}
+.blog-body-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+  .blog-list {
+    border-top: 1px solid $line-color;
+    border-bottom: 1px solid $line-color;
+    padding: 1rem 0;
+    width: 60vw;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+  .blog-hot {
+    margin-left: 1rem;
+    width: 40vw;
+    @media (max-width: $mobile) {
+      margin-left: 0;
+      width: 100%;
+      margin-top: 1rem;
+      display: none;
+    }
+  }
+}
+
+.blog-list-inner {
+  margin-top: 1rem;
+  &:not(:last-child) {
+    border-bottom: 2px dashed $line-color;
+  }
+}
+
+
+/**
+  Blog Post Style
+ */
+
+.blog-post-style {
+  margin: 1rem auto;
+  max-width: 960px;
+  padding: 1rem;
+  font-family: Georgia1, Georgia, 'Merriweather', serif, "SimSun", "STSong", serif;
+  font-size: 19px;
+  line-height: 1.8;
+
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga", "kern", "clig", "calt";
+  -ms-font-feature-settings: "liga", "kern", "clig", "calt";
+  -webkit-font-feature-settings: "liga", "kern", "clig", "calt";
+  font-feature-settings: "liga", "kern", "clig", "calt";
+
+  p {
+    margin: 15px 0 25px;
+  }
+
+  a {
+    background-size: 0;
+    color: #1a0dab;
+    text-transform: none;
+    text-decoration: underline;
+    background: transparent;
+    transition: background 150ms ease;
+  }
+  @media (max-width: $mobile) {
+    margin: 0;
+  }
+}
+
+.tag-style {
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.go-back {
+  margin: 1rem;
+  button {
+    outline: none;
+    border-radius: 0.3rem;
+    background-color: $main-color;
+    padding: 0.2rem 2rem;
+    border: 1px dashed $line-color;
+  }
+}
+.curr {
+  background-color: #9e7a7a;
+}

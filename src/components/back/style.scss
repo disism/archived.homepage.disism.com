@@ -1,0 +1,9 @@
+@import "../../styles/variables";
+
+.go-back-homepage {
+  margin: 1rem;
+  a {
+    border: 1px dashed $line-color;
+    padding: .2rem 1rem;
+  }
+}

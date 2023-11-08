@@ -1,0 +1,126 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
+.header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+  @media (max-width: $table) {
+    flex-direction: column;
+  }
+
+  .header-title {
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-size: 2rem;
+
+    p {
+      margin: 2rem 0;
+    }
+    @include gradient($grad-left, $grad-right);
+  }
+
+  .header-description {
+    font-size: 1.5rem;
+    font-family: $font-code;
+    font-weight: bolder;
+    text-decoration: none;
+    background-image: linear-gradient(#734338, #734338);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 50% 2px;
+    padding-bottom: 2px;
+  }
+
+
+  .header-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    a {
+      margin-right: 1.5rem;
+      white-space: nowrap;
+      &:last-child {
+        margin-right: 0;
+      }
+      @media (max-width: $mobile) {
+        margin: 1rem;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      @media (max-width: $table) {
+        margin: 1rem;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      &[aria-current="page"] {
+        background-size: 100% 2px;
+        color: black;
+      }
+    }
+  }
+
+  .header-select {
+    display: flex;
+    align-items: flex-end;
+    $header-select-header: 2.8rem;
+
+    .header-select-default {
+      margin-left: 1rem;
+      cursor: pointer;
+      height: $header-select-header;
+      line-height: $header-select-header;
+      width: 10rem;
+
+      @media (max-width: $mobile) {
+        width: 100%;
+        margin: 0;
+      }
+      @media (max-width: $table) {
+        margin: 0;
+      }
+
+      button {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 1rem 0 1rem;
+
+        .header-select-icon {
+          background-image: url("../../icons/icons8-change.svg");
+          @include HeaderChangeSiteIcon;
+        }
+        .header-install-icon {
+          background-image: url("../../icons/icons8-turtle.svg");
+          @include HeaderChangeSiteIcon;
+        }
+        .header-asa-icon {
+          background-image: url("../../icons/icons8-cat.svg");
+          @include HeaderChangeSiteIcon;
+        }
+        .header-dudu-icon {
+          background-image: url("../../icons/icons8-mastodon.svg");
+          @include HeaderChangeSiteIcon;
+        }
+      }
+    }
+
+    .header-select-menu {
+      list-style: none;
+      position: relative;
+
+      button {
+        margin: 0.2rem 0;
+      }
+
+    }
+  }
+}
